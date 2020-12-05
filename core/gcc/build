@@ -20,7 +20,7 @@ esac
 
 CPPFLAGS="-I/mnt/mlfs/usr/include" \
 LDFLAGS="-L/mnt/mlfs/usr/lib" \
-../configure \
+../gcc/configure \
 	--prefix=/usr \
 	--libexecdir=/usr/lib \
 	--mandir=/usr/share/man \
