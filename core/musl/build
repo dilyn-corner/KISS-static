@@ -23,5 +23,5 @@ cc getconf.c -o getconf
 cc getent.c  -o getent
 
 for bin in getconf getent; do
-    install -Dm755 "$1/usr/bin/$bin"
+    install -Dm755 "$bin" "$1/usr/bin/$bin"
 done
