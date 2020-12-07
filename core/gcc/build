@@ -24,9 +24,11 @@ esac
 	--mandir=/usr/share/man \
 	--infodir=/usr/share/info \
 	--build=x86_64-pc-linux-musl \
+    --disable-lto \
 	--disable-nls \
-	--disable-werror \
 	--disable-libmpx \
+	--disable-shared \
+	--disable-werror \
 	--disable-multilib \
 	--disable-libmudflap \
 	--disable-fixed-point \
@@ -34,7 +36,6 @@ esac
 	--disable-libstdcxx-pch \
 	--enable-checking=release \
 	--enable-tls \
-	--disable-shared \
 	--enable-threads \
 	--enable-default-ssp \
 	--enable-__cxa_atexit \
