@@ -18,8 +18,6 @@ case $2 in "$gcc_version"*)
     bootstrap=--disable-bootstrap
 esac
 
-CPPFLAGS="-I/mnt/mlfs/usr/include" \
-LDFLAGS="-L/mnt/mlfs/usr/lib" \
 ../gcc/configure \
 	--prefix=/usr \
 	--libexecdir=/usr/lib \

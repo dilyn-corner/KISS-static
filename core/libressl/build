@@ -4,7 +4,7 @@
     --prefix=/usr \
     --sysconfdir=/etc \
     --disable-tests \
-    --disable-shared \
+    --disable-shared
 
 make
 make DESTDIR="$1" install

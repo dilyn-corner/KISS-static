@@ -3,7 +3,7 @@
 ./configure \
     --prefix=/usr \
     --libdir=/usr/lib \
-    --shared
+    --static
 
 make
 make DESTDIR="$1" install

@@ -8,25 +8,23 @@ EOF
 chmod +x makeinfo
 export PATH=$PATH:$PWD
 
-CPPFLAGS="-I/mnt/mlfs/usr/include" \
-LDFLAGS="-L/mnt/mlfs/usr/lib" \
 ./configure \
 	--prefix=/usr \
-	--with-lib-path=/usr/lib:/usr/local/lib \
+	--with-mmap \
+	--with-system-zlib \
 	--with-targets=x86_64-pep \
+	--with-static-standard-libraries \
+	--with-lib-path=/usr/lib:/usr/local/lib \
+	--disable-gdb \
+	--disable-nls \
 	--disable-gold \
+	--disable-gprof \
+	--disable-werror \
+	--disable-multilib \
+	--disable-readline \
 	--enable-lto \
 	--enable-ld=default \
 	--enable-plugins \
-	--disable-multilib \
-	--disable-werror \
-	--disable-gdb \
-	--disable-nls \
-	--disable-readline \
-	--disable-gprof \
-	--with-mmap \
-	--with-system-zlib \
-	--with-static-standard-libraries
 
 make configure-host
 make tooldir=/usr
