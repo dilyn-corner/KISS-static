@@ -6,16 +6,42 @@ ________________________________________________________________________________
 KISS-static - KISS, but static
 ________________________________________________________________________________
 
+
 The officially unofficial repository for KISS Linux built statically maintained
 by Dilyn Corner. 
 
-This README will be updated with goals and to-dos soon(tm). 
 
-This repository is structured like the [official
+### WARNING
+
+The tarball is ultimately useless in its current state if your goal is to go
+from a basic tarball to a (cannonically) functioning system. You will quickly
+find that you will be unable to build literally anything (after all, you don't
+have the right files in /lib!). Currently, the tarball is just a cute
+comparison. But it functions perfectly adequately! In the future I will probably
+put up the toolchain that I used to build the system. For now, you can use
+[Michael Forney's](https://github.com/michaelforney/oasis-toolchain); I'm sure
+he won't mind. 
+
+Speaking of, if you appreciate the idea behind this project, I direct you to
+[Oasis Linux](https://github.com/oasislinux), a better implementation of this
+chain of thought. It is very well done, and at the very least you should read
+more about it. 
+
+
+### Status
+
+KISS official: 31MB compressed, 210MB uncompressed.
+KISS-static:   19MB compressed, 114MB uncompressed.
+
+Ultimate goal: a simple, statically built, minimal environment. A graphical one
+might be nice to offer, but I'd rather you built `llvm` and `mesa` yourself for
+now.
+
+This repository is (currently) structured like the [official
 one](https://github.com/kisslinux/repo).
 
-There is a static rootfs tarball that will soon be available for downloading 
-and usage similar to KISS; see [KISS install guide](https://k1ss.org/install).
+There is a static rootfs tarball available for downloading and usage similar to
+KISS; see [KISS install guide](https://k1ss.org/install).
 
 Clone this repository to build static stuff. Switching to this repo on a
 nonstatic system is untested and is more than likely incredibly dangerous. *DO
@@ -24,9 +50,6 @@ NOT DO IT IF YOU LIKE YOUR ld.so!*
 
 Enjoy.
 
-
-KISS official: ~210MB.
-KISS-static:   ~140MB.
 
 # Repository trust
 All commits signed with my own GPG key.
