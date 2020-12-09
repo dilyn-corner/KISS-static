@@ -2,7 +2,8 @@
 
 ./configure \
     --prefix=/usr \
-    --sysconfdir=/etc
+    --sysconfdir=/etc \
+    --disable-shared
 
 make
 make DESTDIR="$1" install
