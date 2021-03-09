@@ -1,5 +1,5 @@
 |/  
-|\ISS Repo                                                      https://k1ss.org
+|\ISS Repo                                                 https://k1sslinux.org
 ________________________________________________________________________________
 
 
@@ -7,41 +7,46 @@ KISS-static - KISS, but static
 ________________________________________________________________________________
 
 
-The officially unofficial repository for KISS Linux built statically maintained
-by Dilyn Corner. 
+The officially unofficial repository for KISS Linux, but static.
 
 
 ### WARNING
 
-The tarball is ultimately useless in its current state if your goal is to go
-from a basic tarball to a (cannonically) functioning system. You will quickly
-find that you will be unable to build literally anything (after all, you don't
-have the right files in /lib!). Currently, the tarball is just a cute
-comparison. But it functions perfectly adequately! In the future I will probably
-put up the toolchain that I used to build the system. For now, you can use
-[Michael Forney's](https://github.com/michaelforney/oasis-toolchain); I'm sure
-he won't mind. 
+This repository is dirty. Every package in core should probably build just fine.
+The things in extra will be harrier. Good luck, have fun! Will accept PRs for
+functioning packages that are in canonical repo. 
 
-Speaking of, if you appreciate the idea behind this project, I direct you to
-[Oasis Linux](https://github.com/oasislinux), a better implementation of this
-chain of thought. It is very well done, and at the very least you should read
-more about it. 
+
+### What to do 
+
+You have two tracks: download the static-2020.12-1 and lib tarballs, or the
+tools tarball. Both will give you a static system to work from - tools will give
+you a complex toolchain, the static and lib tarballs will give you the most
+basic system possible. 
+
+As an alternative to my toolchain, you can try out the one Michael Forney,
+author of Oasis Linux, made:
+https://github.com/michaelforney/oasis-toolchain)
+I'm sure he won't mind. 
+
+Speaking of Oasis, if you appreciate the idea behind this project, I direct you
+to https://github.com/oasislinux, a better implementation of this chain of
+thought. It is very well done, and at the very least you should read more about
+it. 
+
+Ultimate goal: a simple, statically built, minimal environment.
+If you want to use mesa, you'll have to build it shared. I know, I know; sad.
+The alternative, if you like wayland, is swc/wld/velox! Also created by Michael
+Forney. It's good stuff, albeit very limiting in terms of graphical software
+(there are very few choices for webbrowser/terminal/etc). 
 
 
 ### Status
 
-KISS official: 31MB compressed, 210MB uncompressed.
-KISS-static:   19MB compressed, 114MB uncompressed.
+KISS official 2020.9-2:  31MB compressed, 210MB uncompressed
+KISS-static   2020.12-1: 19MB compressed, 114MB uncompressed
+KISS-static   libs:      31MB compressed, 144MB uncompressed
 
-Ultimate goal: a simple, statically built, minimal environment. A graphical one
-might be nice to offer, but I'd rather you built `llvm` and `mesa` yourself for
-now.
-
-This repository is (currently) structured like the [official
-one](https://github.com/kisslinux/repo).
-
-There is a static rootfs tarball available for downloading and usage similar to
-KISS; see [KISS install guide](https://k1ss.org/install).
 
 Clone this repository to build static stuff. Switching to this repo on a
 nonstatic system is untested and is more than likely incredibly dangerous. *DO
