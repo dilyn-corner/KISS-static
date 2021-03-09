@@ -22,11 +22,11 @@ functioning packages that are in canonical repo.
 You have two tracks: download the static-2020.12-1 and lib tarballs, or the
 tools tarball. Both will give you a static system to work from - tools will give
 you a complex toolchain, the static and lib tarballs will give you the most
-basic system possible. 
+basic KISS system possible. 
 
 As an alternative to my toolchain, you can try out the one Michael Forney,
 author of Oasis Linux, made:
-https://github.com/michaelforney/oasis-toolchain)
+https://github.com/michaelforney/oasis-toolchain
 I'm sure he won't mind. 
 
 Speaking of Oasis, if you appreciate the idea behind this project, I direct you
