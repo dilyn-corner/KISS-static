@@ -39,3 +39,12 @@ chmod u+w "$1/usr/lib/libpython"*
     cd "$1/usr/bin"
     rm -f pydoc* idle*
 }
+
+
+# Building meson starts an import chain that includes windows_support.
+# windows_support requires ctypes, which we... don't need... 
+# They are also not conducive to a static python. 
+# If you need Windows support, gl.
+sed -i '/windows_support$/d' \
+    "$1/usr/lib/python${2%.*}/site-packages/setuptools/dist.py"
+

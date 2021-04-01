@@ -72,6 +72,8 @@ _codecs_kr cjkcodecs/_codecs_kr.c
 _codecs_tw cjkcodecs/_codecs_tw.c
 xxsubtype xxsubtype.c
 
+_lsprof _lsprof.c rotatingtree.c
+
 #_ctypes _ctypes/_ctypes.c _ctypes/callbacks.c _ctypes/callproc.c _ctypes/stgdict.c _ctypes/cfield.c -I${prefix}/include -L${prefix}/lib -lffi -ldl
 
 *disabled*
