@@ -1,0 +1,4 @@
+expat    make
+freetype make
+gperf    make
+pkgconf  make

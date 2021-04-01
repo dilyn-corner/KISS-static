@@ -1,0 +1,13 @@
+#!/bin/sh -e
+
+./configure \
+    PKG_CONFIG="pkg-config --static" \
+    --prefix=/usr \
+    --disable-nls \
+    --disable-docs \
+    --enable-static \
+    --disable-shared \
+    --with-default-fonts=/usr/share/fonts
+
+make
+make DESTDIR="$1" install
