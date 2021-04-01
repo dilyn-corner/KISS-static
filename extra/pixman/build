@@ -1,0 +1,15 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+
+sed -i "s/subdir('test')//" meson.build
+
+meson \
+    --prefix=/usr \
+    -Ddefault_library=static \
+    -Dbuildtype=release \
+    -Dgtk=disabled \
+    . build
+
+ninja -C build
+ninja -C build install
