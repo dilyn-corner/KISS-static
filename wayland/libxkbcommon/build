@@ -1,0 +1,20 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+
+sed -i "s/-protocols', /-protocols', static: true, /" meson.build
+sed -i "s/-scanner', /-scanner', static: true, /"     meson.build
+sed -i "s/-client', /-client', static: true, /"       meson.build
+
+meson \
+    --prefix=/usr \
+    -Ddefault_library=static \
+    -Dbuildtype=release \
+    -Denable-x11=false \
+    -Denable-docs=false \
+    -Denable-wayland=true \
+    -Denable-xkbregistry=false \
+    . build
+
+ninja -C build
+ninja -C build install
