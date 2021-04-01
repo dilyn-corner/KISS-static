@@ -19,10 +19,12 @@ export PATH=$PATH:$PWD
 	--disable-nls \
 	--disable-gold \
 	--disable-gprof \
+    --disable-shared \
 	--disable-werror \
 	--disable-multilib \
 	--disable-readline \
 	--enable-lto \
+    --enable-static \
 	--enable-ld=default \
 	--enable-plugins \
 
