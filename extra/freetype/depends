@@ -1,0 +1,9 @@
+bzip2   make
+expat   make
+libdrm  make
+libpng  make
+meson   make
+pixman  make
+pkgconf make
+samurai make
+zlib    make

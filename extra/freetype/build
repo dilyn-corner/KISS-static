@@ -1,0 +1,15 @@
+#!/bin/sh -e
+
+CFLAGS="$CFLAGS -DDEFAULT_TT_INTERPRETER_VERSION=TT_INTERPRETER_VERSION_40" \
+./configure \
+    PKG_CONFIG="pkg-config --static" \
+    --prefix=/usr \
+    --enable-freetype-config \
+    --disable-shared \
+    --with-harfbuzz=no \
+    --with-zlib=yes \
+    --with-bzip2=yes \
+    --with-png=yes
+
+make
+make DESTDIR="$1" install
