@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+make PREFIX=/usr libudev.a libudev.pc
+
+install -Dm644 libudev.a  "$1/usr/lib/libudev.a"
+install -Dm644 udev.h     "$1/usr/include/libudev.h"
+install -Dm644 libudev.pc "$1/usr/lib/pkgconfig/libudev.pc"
