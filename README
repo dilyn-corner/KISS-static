@@ -16,13 +16,22 @@ This repository is dirty. Every package in core should probably build just fine.
 The things in extra will be harrier. Good luck, have fun! Will accept PRs for
 functioning packages that are in canonical repo. 
 
+Currently velox won't play nice with
+fontconfig/libpng/freetype/libudev-zero/something. This will be resolved
+soon(tm).
+
 
 ### What to do 
 
-You have two tracks: download the static-2020.12-1 and lib tarballs, or the
-tools tarball. Both will give you a static system to work from - tools will give
-you a complex toolchain, the static and lib tarballs will give you the most
-basic KISS system possible. 
+The Latest release tarball as of 2021.04-1 will always include the system itself
+along with the binary packages required to restore package building
+functionality. Enough has been left intact for git to ensure you can clone this
+repository.
+
+Additionally, releases named Tools and Libs exist which contain all the
+libraries for the 2020.12-1 release (Libs), and an entire collection of tools
+I used to initially create the 2020.12-1 tarball (Tools). They exist mostly for
+legacy purposes and proof-of-concept; you are encouraged to use later releases.
 
 As an alternative to my toolchain, you can try out the one Michael Forney,
 author of Oasis Linux, made:
@@ -45,6 +54,7 @@ Forney. It's good stuff, albeit very limiting in terms of graphical software
 
 KISS official 2020.9-2:  31MB compressed, 210MB uncompressed
 KISS-static   2020.12-1: 19MB compressed, 114MB uncompressed
+KISS-static   2021.04-1: 16MB compressed, 34MB  uncompressed
 KISS-static   libs:      31MB compressed, 144MB uncompressed
 
 
